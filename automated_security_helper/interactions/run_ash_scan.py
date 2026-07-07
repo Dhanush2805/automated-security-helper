@@ -392,6 +392,7 @@ def run_ash_scan(
                     "checkov",
                     "cdk-nag",
                     "npm-audit",
+                    "grype",
                 ]
                 final_scanners = list(set(final_scanners + fast_scanners))
 
