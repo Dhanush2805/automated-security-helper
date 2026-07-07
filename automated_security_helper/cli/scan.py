@@ -397,7 +397,13 @@ def run_ash_scan_cli_command(
                     raise typer.BadParameter(
                         f"'{fmt}' is not a valid format. Valid formats are: {', '.join(valid_formats)}"
                     )
-
+    ##########################3
+    print("================================")
+    print(f"SOURCE_DIR : {source_dir}")
+    print(f"OUTPUT_DIR : {output_dir}")
+    print("================================")
+    ##########################3
+    
     # Call run_ash_scan with all parameters
     run_ash_scan(
         source_dir=source_dir,
