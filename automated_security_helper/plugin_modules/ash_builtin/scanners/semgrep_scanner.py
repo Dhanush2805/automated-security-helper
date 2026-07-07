@@ -410,7 +410,17 @@ class SemgrepScanner(ScannerPluginBase[SemgrepScannerConfig]):
                 target=target,
                 results_file=results_file,
             )
+            ###########################3
+            ASH_LOGGER.info("=" * 80)
+            ASH_LOGGER.info("FINAL SEMGREP COMMAND")
+            ASH_LOGGER.info(" ".join(final_args))
+            ASH_LOGGER.info("=" * 80)
 
+            ASH_LOGGER.info(f"Semgrep Target: {target}")
+            ASH_LOGGER.info(f"Target Exists: {target.exists()}")
+            ASH_LOGGER.info(f"Results File: {results_file}")
+            #############################3
+            
             # Semgrep expects the target directory at the end of the command
             # final_args.append(str(target))
             self._plugin_log(
